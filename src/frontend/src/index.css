@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 96.3% 0.005 240;
+    --foreground: 18% 0.02 255;
+    --card: 100% 0 0;
+    --card-foreground: 18% 0.02 255;
+    --popover: 100% 0 0;
+    --popover-foreground: 18% 0.02 255;
+    --primary: 22% 0.065 220;
+    --primary-foreground: 100% 0 0;
+    --secondary: 93% 0.01 240;
+    --secondary-foreground: 18% 0.02 255;
+    --muted: 93% 0.01 240;
+    --muted-foreground: 52% 0.02 255;
+    --accent: 72% 0.1 75;
+    --accent-foreground: 18% 0.02 0;
+    --destructive: 50% 0.22 25;
+    --destructive-foreground: 100% 0 0;
+    --border: 88% 0.01 240;
+    --input: 88% 0.01 240;
+    --ring: 22% 0.065 220;
+    --radius: 0.625rem;
+    --navy: 22% 0.065 220;
+    --gold: 72% 0.1 75;
+    --footer-bg: 18% 0 0;
+  }
+
+  * {
+    border-color: oklch(var(--border));
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: oklch(var(--background));
+    color: oklch(var(--foreground));
+    font-family: "Plus Jakarta Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+@layer utilities {
+  .nav-dropdown:hover > .nav-dropdown-panel {
+    display: block;
+  }
+}
